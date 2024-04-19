@@ -1,0 +1,14 @@
+Source: slimbook-base-files
+Section: admin
+Priority: optional
+Maintainer: Slimbook <dev@slimbook.es>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.7
+Homepage: https://github.com/Slimbook-Team/slimbook-base-files
+
+Package: slimbook-base-files
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, base-files
+Description: Slimbook base files
+ This package overrides system name and logos
+
