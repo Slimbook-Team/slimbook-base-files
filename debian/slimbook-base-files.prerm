@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -e
+
+PACKAGE_NAME="slimbook-base-files"
+
+ORIGINAL_FILE_1="/usr/lib/os-release"
+DIVERT_FILE_1="/usr/lib/os-release.divert"
+SLIMBOOK_FILE_1="/usr/lib/slimbook-os-release"
+
+case "$1" in
+    upgrade|deconfigure)
+    ;;
+
+    remove|purge)
+
+    if [ -f ${DIVERT_FILE_1} ] ; then
+        rm -rf $SLIMBOOK_FILE_1 || true
+        dpkg-divert --package  ${PACKAGE_NAME} --rename --remove ${ORIGINAL_FILE_1}|| true
+    fi
+
+    ;;
+
+    failed-upgrade)
+    ;;
+
+    *)
+        echo "prerm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0

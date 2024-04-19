@@ -1,9 +1,21 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
+PACKAGE_NAME="slimbook-base-files"
+
+ORIGINAL_FILE_1="/usr/lib/os-release"
+DIVERT_FILE_1="/usr/lib/os-release.divert"
+SLIMBOOK_FILE_1="/usr/lib/slimbook-os-release"
+
+
 case "$1" in
     configure)
+        if [ -e "$ORIGINAL_FILE_1" ]; then
+
+            dpkg-divert --package ${PACKAGE_NAME} --rename --add --divert  ${DIVERT_FILE_1}  ${ORIGINAL_FILE_1}
+            ln -s ${DIVERT_FILE_1} ${SLIMBOOK_FILE_1} 
+        fi
 
     ;;
 
