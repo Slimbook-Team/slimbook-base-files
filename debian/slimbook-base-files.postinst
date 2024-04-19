@@ -5,18 +5,39 @@ set -e
 PACKAGE_NAME="slimbook-base-files"
 
 ORIGINAL_FILE_1="/usr/lib/os-release"
-DIVERT_FILE_1="/usr/lib/os-release.divert"
+DIVERT_FILE_1="/usr/lib/os-release.distrib"
 SLIMBOOK_FILE_1="/usr/lib/slimbook-os-release"
 
+ORIGINAL_FILE_2="/etc/lsb-release"
+DIVERT_FILE_2="/etc/lsb-release.distrib"
+SLIMBOOK_FILE_2="/etc/slimbook-lsb-release"
+
+ORIGINAL_FILE_3="/usr/share/pixmaps/ubuntu-logo-text.png"
+DIVERT_FILE_3="/usr/share/pixmaps/ubuntu-logo-text.png.distrib"
+SLIMBOOK_FILE_3="/usr/share/pixmaps/slimbook-logo.png"
+
+ORIGINAL_FILE_4="/usr/share/pixmaps/ubuntu-logo-text-dark.png"
+DIVERT_FILE_4="/usr/share/pixmaps/ubuntu-logo-text-dark.png.distrib"
+SLIMBOOK_FILE_4="/usr/share/pixmaps/slimbook-logo-dark.png"
 
 case "$1" in
     configure)
-        if [ -e "$ORIGINAL_FILE_1" ]; then
-
-            dpkg-divert --package ${PACKAGE_NAME} --rename --add --divert  ${DIVERT_FILE_1}  ${ORIGINAL_FILE_1}
-            ln -s ${DIVERT_FILE_1} ${SLIMBOOK_FILE_1} 
-        fi
-
+        
+        dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_1}
+        cp ${ORIGINAL_FILE_1} ${DIVERT_FILE_1}
+        cp ${SLIMBOOK_FILE_1} ${ORIGINAL_FILE_1}
+        
+        dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_2}
+        cp ${ORIGINAL_FILE_2} ${DIVERT_FILE_2}
+        cp ${SLIMBOOK_FILE_2} ${ORIGINAL_FILE_2}
+        
+        dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_3}
+        cp ${ORIGINAL_FILE_3} ${DIVERT_FILE_3}
+        cp ${SLIMBOOK_FILE_3} ${ORIGINAL_FILE_3}
+        
+        dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_4}
+        cp ${ORIGINAL_FILE_4} ${DIVERT_FILE_4}
+        cp ${SLIMBOOK_FILE_4} ${ORIGINAL_FILE_4}
     ;;
 
     abort-upgrade|abort-deconfigure|abort-remove)

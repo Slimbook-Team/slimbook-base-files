@@ -8,17 +8,32 @@ ORIGINAL_FILE_1="/usr/lib/os-release"
 DIVERT_FILE_1="/usr/lib/os-release.divert"
 SLIMBOOK_FILE_1="/usr/lib/slimbook-os-release"
 
+ORIGINAL_FILE_2="/etc/lsb-release"
+DIVERT_FILE_2="/etc/lsb-release.distrib"
+SLIMBOOK_FILE_2="/etc/slimbook-lsb-release"
+
+ORIGINAL_FILE_3="/usr/share/pixmaps/ubuntu-logo-text.png"
+DIVERT_FILE_3="/usr/share/pixmaps/ubuntu-logo-text.png.distrib"
+SLIMBOOK_FILE_3="/usr/share/pixmaps/slimbook-logo.png"
+
+ORIGINAL_FILE_4="/usr/share/pixmaps/ubuntu-logo-text-dark.png"
+DIVERT_FILE_4="/usr/share/pixmaps/ubuntu-logo-text-dark.png.distrib"
+SLIMBOOK_FILE_4="/usr/share/pixmaps/slimbook-logo-dark.png"
+
 case "$1" in
     upgrade|deconfigure)
     ;;
 
     remove|purge)
 
-    if [ -f ${DIVERT_FILE_1} ] ; then
-        rm -rf $SLIMBOOK_FILE_1 || true
-        dpkg-divert --package  ${PACKAGE_NAME} --rename --remove ${ORIGINAL_FILE_1}|| true
-    fi
-
+        cp ${DIVERT_FILE_1} ${ORIGINAL_FILE_1} || true
+        dpkg-divert --package  ${PACKAGE_NAME} --no-rename --remove ${ORIGINAL_FILE_1}|| true
+        cp ${DIVERT_FILE_2} ${ORIGINAL_FILE_2} || true
+        dpkg-divert --package  ${PACKAGE_NAME} --no-rename --remove ${ORIGINAL_FILE_2}|| true
+        cp ${DIVERT_FILE_3} ${ORIGINAL_FILE_3} || true
+        dpkg-divert --package  ${PACKAGE_NAME} --no-rename --remove ${ORIGINAL_FILE_3}|| true
+        cp ${DIVERT_FILE_4} ${ORIGINAL_FILE_4} || true
+        dpkg-divert --package  ${PACKAGE_NAME} --no-rename --remove ${ORIGINAL_FILE_4}|| true
     ;;
 
     failed-upgrade)
