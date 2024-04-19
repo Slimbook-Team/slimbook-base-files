@@ -14,11 +14,11 @@ SLIMBOOK_FILE_2="/etc/slimbook-lsb-release"
 
 ORIGINAL_FILE_3="/usr/share/pixmaps/ubuntu-logo-text.png"
 DIVERT_FILE_3="/usr/share/pixmaps/ubuntu-logo-text.png.distrib"
-SLIMBOOK_FILE_3="/usr/share/pixmaps/slimbook-logo.png"
+SLIMBOOK_FILE_3="/usr/share/pixmaps/slimbook-logo-text.png"
 
 ORIGINAL_FILE_4="/usr/share/pixmaps/ubuntu-logo-text-dark.png"
 DIVERT_FILE_4="/usr/share/pixmaps/ubuntu-logo-text-dark.png.distrib"
-SLIMBOOK_FILE_4="/usr/share/pixmaps/slimbook-logo-dark.png"
+SLIMBOOK_FILE_4="/usr/share/pixmaps/slimbook-logo-text-dark.png"
 
 case "$1" in
     upgrade|deconfigure)
