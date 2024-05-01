@@ -1,3 +1,10 @@
+slimbook-base-files (24.1.0) noble; urgency=medium
+
+  * New logos
+  * Updated os-release name
+
+ -- Slimbook <dev@slimbook.es>  Wed, 01 May 2024 21:28:23 +0200
+
 slimbook-base-files (24.0.0) noble; urgency=medium
 
   * Initial release.
