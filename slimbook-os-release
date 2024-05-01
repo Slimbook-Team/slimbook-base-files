@@ -1,6 +1,6 @@
 PRETTY_NAME="Slimbook OS"
-NAME="Slimbook OS"
-VERSION_ID="24.04"
+NAME="SlimbookOS"
+VERSION_ID="24.0"
 VERSION="24"
 VERSION_CODENAME=noble
 ID=ubuntu
