@@ -12,3 +12,8 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, base-files
 Description: Slimbook base files
  This package overrides system name and logos
 
+Package: slimbook-keyring
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, slimbook-base-files
+Description: Slimbook apt keyrings
+ This package carries apt keyrings
