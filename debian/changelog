@@ -1,3 +1,9 @@
+slimbook-base-files (24.3.0) noble; urgency=medium
+
+  * Added ulauncher and mozilla sources in new format
+
+ -- Slimbook <dev@slimbook.es>  Fri, 10 May 2024 15:33:33 +0200
+
 slimbook-base-files (24.2.0) noble; urgency=medium
 
   * Added a keyring package
