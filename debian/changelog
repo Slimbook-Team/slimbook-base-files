@@ -1,3 +1,9 @@
+slimbook-base-files (24.3.3) noble; urgency=medium
+
+  * apt is uncapable to parse properly a file without extension
+
+ -- Slimbook <dev@slimbook.es>  Fri, 10 May 2024 16:32:37 +0200
+
 slimbook-base-files (24.3.2) noble; urgency=medium
 
   * Back to classic source format for mozilla
