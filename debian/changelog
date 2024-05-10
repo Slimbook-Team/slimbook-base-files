@@ -1,3 +1,9 @@
+slimbook-base-files (24.3.2) noble; urgency=medium
+
+  * Back to classic source format for mozilla
+
+ -- Slimbook <dev@slimbook.es>  Fri, 10 May 2024 16:24:30 +0200
+
 slimbook-base-files (24.3.1) noble; urgency=medium
 
   * Fixed mozilla source

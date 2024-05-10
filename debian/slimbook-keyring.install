@@ -1,2 +1,2 @@
-#keys/* /etc/apt/keyrings/
+keys/* /etc/apt/keyrings/
 sources/* /etc/apt/sources.list.d/
