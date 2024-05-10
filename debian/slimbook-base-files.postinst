@@ -23,20 +23,28 @@ SLIMBOOK_FILE_4="/usr/share/pixmaps/slimbook-logo-text-dark.png"
 case "$1" in
     configure)
         
-        dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_1}
-        cp ${ORIGINAL_FILE_1} ${DIVERT_FILE_1}
+        if [ ! -f ${DIVERT_FILE_1} ]; then
+            dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_1}
+            cp ${ORIGINAL_FILE_1} ${DIVERT_FILE_1}
+        fi
         cp ${SLIMBOOK_FILE_1} ${ORIGINAL_FILE_1}
         
-        dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_2}
-        cp ${ORIGINAL_FILE_2} ${DIVERT_FILE_2}
+        if [ ! -f ${DIVERT_FILE_2} ]; then
+            dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_2}
+            cp ${ORIGINAL_FILE_2} ${DIVERT_FILE_2}
+        fi
         cp ${SLIMBOOK_FILE_2} ${ORIGINAL_FILE_2}
         
-        dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_3}
-        cp ${ORIGINAL_FILE_3} ${DIVERT_FILE_3}
+        if [ ! -f ${DIVERT_FILE_3} ]; then
+            dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_3}
+            cp ${ORIGINAL_FILE_3} ${DIVERT_FILE_3}
+        fi
         cp ${SLIMBOOK_FILE_3} ${ORIGINAL_FILE_3}
         
-        dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_4}
-        cp ${ORIGINAL_FILE_4} ${DIVERT_FILE_4}
+        if [ ! -f ${DIVERT_FILE_4} ]; then
+            dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_4}
+            cp ${ORIGINAL_FILE_4} ${DIVERT_FILE_4}
+        fi
         cp ${SLIMBOOK_FILE_4} ${ORIGINAL_FILE_4}
     ;;
 

@@ -26,13 +26,13 @@ case "$1" in
 
     remove|purge)
 
-        cp ${DIVERT_FILE_1} ${ORIGINAL_FILE_1} || true
+        mv ${DIVERT_FILE_1} ${ORIGINAL_FILE_1} || true
         dpkg-divert --package  ${PACKAGE_NAME} --no-rename --remove ${ORIGINAL_FILE_1}|| true
-        cp ${DIVERT_FILE_2} ${ORIGINAL_FILE_2} || true
+        mv ${DIVERT_FILE_2} ${ORIGINAL_FILE_2} || true
         dpkg-divert --package  ${PACKAGE_NAME} --no-rename --remove ${ORIGINAL_FILE_2}|| true
-        cp ${DIVERT_FILE_3} ${ORIGINAL_FILE_3} || true
+        mv ${DIVERT_FILE_3} ${ORIGINAL_FILE_3} || true
         dpkg-divert --package  ${PACKAGE_NAME} --no-rename --remove ${ORIGINAL_FILE_3}|| true
-        cp ${DIVERT_FILE_4} ${ORIGINAL_FILE_4} || true
+        mv ${DIVERT_FILE_4} ${ORIGINAL_FILE_4} || true
         dpkg-divert --package  ${PACKAGE_NAME} --no-rename --remove ${ORIGINAL_FILE_4}|| true
     ;;
 
