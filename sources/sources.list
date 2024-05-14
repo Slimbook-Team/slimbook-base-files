@@ -1,0 +1,3 @@
+deb http://archive.ubuntu.com/ubuntu noble main universe multiverse restricted
+deb http://archive.ubuntu.com/ubuntu noble-updates main universe multiverse restricted
+deb http://archive.ubuntu.com/ubuntu noble-security main universe multiverse restricted

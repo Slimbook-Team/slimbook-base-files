@@ -1,0 +1,3 @@
+deb https://archive.slimbook.com/24 slimbookos main
+deb https://archive.slimbook.com/24 slimbookos-updates main
+deb https://archive.slimbook.com/24 slimbookos-security main
