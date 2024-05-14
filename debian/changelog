@@ -1,3 +1,10 @@
+slimbook-base-files (24.4.0) noble; urgency=medium
+
+  * Added slimbook repo key
+  * Sources list ar not longed deployed on etc
+
+ -- Slimbook <dev@slimbook.es>  Tue, 14 May 2024 14:42:16 +0200
+
 slimbook-base-files (24.3.3) noble; urgency=medium
 
   * apt is uncapable to parse properly a file without extension
