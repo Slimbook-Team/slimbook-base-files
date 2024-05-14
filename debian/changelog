@@ -1,4 +1,4 @@
-slimbook-base-files (24.4.0) noble; urgency=medium
+slimbook-base-files (24.4.1) noble; urgency=medium
 
   * Added slimbook repo key
   * Sources list ar not longed deployed on etc
