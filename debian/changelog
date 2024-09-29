@@ -1,3 +1,9 @@
+slimbook-base-files (24.5.0) noble; urgency=medium
+
+  * Added a fix for neon keyring
+
+ -- Slimbook <dev@slimbook.es>  Sun, 29 Sep 2024 23:59:25 +0200
+
 slimbook-base-files (24.4.1) noble; urgency=medium
 
   * Added slimbook repo key
