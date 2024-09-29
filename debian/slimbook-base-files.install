@@ -1,3 +1,4 @@
 *.png /usr/share/pixmaps/
 slimbook-lsb-release /etc/
 slimbook-os-release /usr/lib/
+fixes/* /usr/share/slimbook-os/fixes/

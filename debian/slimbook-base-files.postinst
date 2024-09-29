@@ -22,6 +22,8 @@ SLIMBOOK_FILE_4="/usr/share/pixmaps/slimbook-logo-text-dark.png"
 
 case "$1" in
     configure)
+        #execute fixes
+        run-parts --regex 'fix-*' /usr/share/slimbook-os/fixes || true
         
         if [ ! -f ${DIVERT_FILE_1} ]; then
             dpkg-divert --package ${PACKAGE_NAME} --no-rename --add ${ORIGINAL_FILE_1}
