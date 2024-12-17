@@ -18,4 +18,14 @@ Architectures: amd64
 Signed-By: /etc/apt/keyrings/neon-archive-keyring.asc" > $file
     fi
 
+    if [ $md5 = "20d763d7bef53c0be3c42c11e26ffda8" ]; then
+        echo "Fixing $file"
+        echo "X-Repolib-Name: KDE neon noble
+Types: deb deb-src
+URIs: http://archive.neon.kde.org/release
+Suites: noble
+Components: main
+Signed-By: /etc/apt/keyrings/neon-archive-keyring.asc" > $file
+    fi
+
 fi
