@@ -1,3 +1,9 @@
+slimbook-base-files (24.6.0) noble; urgency=medium
+
+  * Added a fix for ubuntu unattended upgrades
+
+ -- Slimbook <dev@slimbook.es>  Tue, 17 Dec 2024 09:38:01 +0100
+
 slimbook-base-files (24.5.0) noble; urgency=medium
 
   * Added a fix for neon keyring
