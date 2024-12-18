@@ -11,7 +11,7 @@ if [ -e $file ]; then
         echo "Fixing $file"
         echo "X-Repolib-Name: KDE neon noble
 Types: deb deb-src
-URIs: http://archive.neon.kde.org/release
+URIs: http://archive.neon.kde.org/user
 Suites: noble
 Components: main
 Architectures: amd64
@@ -22,7 +22,7 @@ Signed-By: /etc/apt/keyrings/neon-archive-keyring.asc" > $file
         echo "Fixing $file"
         echo "X-Repolib-Name: KDE neon noble
 Types: deb deb-src
-URIs: http://archive.neon.kde.org/release
+URIs: http://archive.neon.kde.org/user
 Suites: noble
 Components: main
 Signed-By: /etc/apt/keyrings/neon-archive-keyring.asc" > $file
