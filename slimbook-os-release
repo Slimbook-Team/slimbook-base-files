@@ -1,10 +1,10 @@
 PRETTY_NAME="Slimbook OS"
 NAME="SlimbookOS"
-VERSION_ID="24.0"
-VERSION="24"
-VERSION_CODENAME=noble
+VERSION_ID="26.0"
+VERSION="26"
+VERSION_CODENAME=resolute
 ID=ubuntu
 ID_LIKE=debian
 HOME_URL="https://www.slimbook.com"
-UBUNTU_CODENAME=noble
+UBUNTU_CODENAME=resolute
 LOGO=slimbook-logo
