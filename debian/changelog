@@ -1,3 +1,9 @@
+slimbook-base-files (26.0.0~alpha0) resolute; urgency=medium
+
+  * Initial 26.04 release (still wip)
+
+ -- Slimbook <dev@slimbook.es>  Fri, 27 Mar 2026 13:37:30 +0100
+
 slimbook-base-files (24.9.0) noble; urgency=medium
 
   * Fix dpkg info bogus files
