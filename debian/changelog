@@ -1,3 +1,9 @@
+slimbook-base-files (26.0~alpha0) resolute; urgency=medium
+
+  * Updated version to 26.04 resolute raccoon
+
+ -- Slimbook <dev@slimbook.es>  Tue, 07 Apr 2026 17:57:40 +0200
+
 slimbook-base-files (24.9.0) noble; urgency=medium
 
   * Fix dpkg info bogus files
