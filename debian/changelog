@@ -1,3 +1,9 @@
+slimbook-base-files (26.0~alpha2) resolute; urgency=medium
+
+  * Added fix for silencing update-manager upgrades
+
+ -- Slimbook <dev@slimbook.es>  Fri, 10 Apr 2026 12:44:10 +0200
+
 slimbook-base-files (26.0~alpha1) resolute; urgency=medium
 
   * Updated version to 26.04 resolute raccoon
