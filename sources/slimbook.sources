@@ -1,0 +1,17 @@
+Types: deb
+URIs: https://archive.slimbook.com/26/
+Suites: slimbookos
+Components: main
+Signed-By: /etc/apt/trusted.gpg.d/slimbook.gpg
+
+Types: deb
+URIs: https://archive.slimbook.com/26/
+Suites: slimbookos-updates
+Components: main
+Signed-By: /etc/apt/trusted.gpg.d/slimbook.gpg
+
+Types: deb
+URIs: https://archive.slimbook.com/26/
+Suites: slimbookos-security
+Components: main
+Signed-By: /etc/apt/trusted.gpg.d/slimbook.gpg
